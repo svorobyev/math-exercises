@@ -29,10 +29,10 @@ public class MathRest {
         return IntStream.range(0, q)
                 .mapToObj(i -> {
                     final Character operation = odd(i) ? '+' : '*';
-                    final int a = random.nextInt(level - level / 10) + level / 10;
-                    final int b = random.nextInt(level - level / 10) + level / 10;
+                    final long a = random.nextInt(level - level / 10) + level / 10;
+                    final long b = random.nextInt(level - level / 10) + level / 10;
 
-                    final int answer = operation.equals('+') ? a + b : a * b;
+                    final long answer = operation.equals('+') ? a + b : a * b;
                     final String question = valueOf(a) + operation + b;
 
                     return new Exercise(question, valueOf(answer));
